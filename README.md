@@ -7,7 +7,7 @@ nextjs-chrome-extension
 An unopiniated starter for developing Chrome extensions using Next.js
 
 <p align="center">
-<img src="./images/nextjs-chrome-extension.png" alt="Screenshot of nextjs-chrome-extension" width="616">
+<img src="./assets/images/nextjs-chrome-extension.png" alt="Screenshot of nextjs-chrome-extension" width="616">
 </p>
   
 ## Getting Started
@@ -34,7 +34,7 @@ brew install gsed // homebrew installation
 Open the Extension Management page by navigating to `chrome://extensions`. Enable Developer Mode by clicking the toggle switch next to Developer mode. Click the Load unpacked button and select the `/out` directory.
 
 <p align="center">
-<img src="/images/add-extension-to-chrome.png" alt="Screenshot of chrome://extensions page" width="616">
+<img src="/assets/images/add-extension-to-chrome.png" alt="Screenshot of chrome://extensions page" width="616">
 </p>
 
 ## Learn More
