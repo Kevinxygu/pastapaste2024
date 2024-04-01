@@ -1,4 +1,8 @@
-# nextjs-chrome-extension
+# This project uses the below boilerplate extension :)) 
+
+The full readme will be updated soon!
+
+nextjs-chrome-extension
 
 An unopiniated starter for developing Chrome extensions using Next.js
 
