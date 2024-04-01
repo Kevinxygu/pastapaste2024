@@ -10,7 +10,9 @@
     "48": "/icons/favicon-48.png",
     "128": "/icons/favicon-128.png"
   },
-  "permissions": [],
+  "permissions": [
+    "storage"
+  ],
   "content_scripts": [
     {
       "matches": ["https://*/*", "http://*/*"],
