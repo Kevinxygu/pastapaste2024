@@ -6,9 +6,9 @@ import Link from 'next/link'
 const Footer = () => {
     return (
         <div className={styles.container}>
-            <Link href="/info">Info</Link>
+            <Link href="./info.html">Info</Link>
             <button>+</button>
-            <Link href="settings">Settings</Link>
+            <Link href="./settings.html">Settings</Link>
         </div>
     )
 };
