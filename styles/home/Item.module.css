@@ -1,0 +1,8 @@
+.container {
+    text-align: center;
+    vertical-align: middle;
+    background-color: rgb(218, 42, 42);
+    margin: 5px;
+    padding: 10px;
+    color: white;
+}
