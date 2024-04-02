@@ -1,0 +1,14 @@
+.container {
+    width: 100%; /* Full width */
+    height: 300px; /* Adjustable based on your needs */
+    background-color: #f0f0f0; /* Example background */
+    position: fixed; /* Position it relative to the viewport */
+    bottom: -100%; /* Start off-screen */
+    left: 0;
+    z-index: 50;
+    transition: bottom 0.5s ease; /* Smooth transition for the 'bottom' property */
+  }
+  
+.visibleContainer {
+    bottom: 0; /* Move into view */
+}
