@@ -1,6 +1,13 @@
 {
   "manifest_version": 3,
   "name": "nextjs-chrome-extension",
+  "permissions": [
+    "storage",
+    "scripting",
+    "activeTab",
+    "tabs",
+    "unlimitedStorage"
+  ],
   "short_name": "nextjs",
   "version": "1.0.0",
   "description": "Chrome extension made with NextJS",
@@ -10,9 +17,6 @@
     "48": "/icons/favicon-48.png",
     "128": "/icons/favicon-128.png"
   },
-  "permissions": [
-    "storage"
-  ],
   "content_scripts": [
     {
       "matches": ["https://*/*", "http://*/*"],
@@ -21,6 +25,7 @@
   ],
   "host_permissions": ["<all_urls>"],
   "action": {
-    "default_popup": "index.html"
+    "default_popup": "index.html",
+    "default_title": "Pastapaste"
   }
 }

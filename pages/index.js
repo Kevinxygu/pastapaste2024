@@ -5,13 +5,19 @@ import Header from "../components/global/Header.jsx"
 import ItemsList from "../components/home/ItemsList.jsx"
 import Footer from '../components/global/Footer.jsx'
 import Link from "next/link"
+import { useState } from "react"
 
 export default function Home() {
+  const [reloadItems, setReloadItems] = useState(0);
+
+  const handleReloadItems = () => {
+    setReloadItems(prevVal => prevVal + 1); // update the previous value to address that a change has been made, triggering the useEffect
+}
   return (
     <div>
       <Header />
-      <ItemsList />
-      <Footer />
+      <ItemsList reloadItems={reloadItems} handleReloadItems={handleReloadItems} />
+      <Footer handleReloadItems={handleReloadItems}/>
     </div>
   )
 }

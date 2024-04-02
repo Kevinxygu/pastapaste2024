@@ -5,13 +5,13 @@ import { useState } from 'react';
 import AddNewForm from '../home/addnew/addnewform';
 
 // header for home page (no back button in the top)
-const Footer = () => {
+const Footer = ({handleReloadItems}) => {
     const [addScreenVisible, setAddScreenVisible] = useState(false)
     return (
         <div className={styles.container}>
             <Link href="./info.html">Info</Link>
             <button onClick={() => setAddScreenVisible(true)}>+</button>
-            <AddNewForm visible={addScreenVisible} onHide={() => setAddScreenVisible(false)} />            
+            <AddNewForm handleReloadItems={handleReloadItems} visible={addScreenVisible} onHide={() => setAddScreenVisible(false)} />            
             <Link href="./settings.html">Settings</Link>
         </div>
     )
