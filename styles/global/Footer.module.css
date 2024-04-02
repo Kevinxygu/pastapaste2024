@@ -1,0 +1,6 @@
+.container {
+    background-color: lightslategray;
+    justify-content: center;
+    display: table;
+    margin-top: 0px;
+}
