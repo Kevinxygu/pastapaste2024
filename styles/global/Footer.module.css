@@ -3,6 +3,11 @@
     justify-content: center;
     display: table;
     margin-top: 0px;
-    width: 402px;
+    width: 100%; /* Adjusted to 100% to span the entire width */
     text-align: center;
+    height: 60px;
+    position: fixed; /* This line is added */
+    bottom: 0; /* This line is added */
+    left: 0; /* This line ensures it aligns to the left edge */
+    z-index: 30;
 }

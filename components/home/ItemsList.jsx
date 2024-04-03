@@ -23,7 +23,7 @@ const ItemsList = ({reloadItems, handleReloadItems}) => {
         if (JSONList) {
             setItems(JSONList);
         }
-    }
+    };
 
     return (
         <div className={styles.container}>

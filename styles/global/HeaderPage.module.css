@@ -4,4 +4,10 @@
     background-color: gray;
     margin: 0;
     padding: 15px;
+    position: fixed;
+    width: 100%;
+    top: left;
+    left: 0;
+    z-index: 30;
+    height: 50px;
 }

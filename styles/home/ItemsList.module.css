@@ -2,11 +2,11 @@
     text-align: center;
     vertical-align: middle;
     margin: 0;
-    padding: 10px;
+    padding: 60px 10px;
     color: white;
     background-color: #343434;
     justify-content: center;
-    max-height: 410px;
+    max-height: 610px;
     overflow: scroll;
 }
 
