@@ -1,15 +1,19 @@
 .container {
     text-align: center;
     vertical-align: middle;
-    margin: 0;
-    padding: 60px 10px;
     color: white;
     background-color: #343434;
     justify-content: center;
-    max-height: 610px;
+    max-height: 456px;
     overflow: scroll;
 }
 
 .container::-webkit-scrollbar {
     display: none;
+}
+
+.outerContainer {
+    color: white;
+    background-color: #343434;
+    padding: 40px 10px 10px;
 }

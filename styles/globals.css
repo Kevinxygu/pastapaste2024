@@ -7,6 +7,7 @@ body {
   width: 402px;
   height: 632px;
   background-color: #343434;
+  overscroll-behavior: none;
 }
 
 a {

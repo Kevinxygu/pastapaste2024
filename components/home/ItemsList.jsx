@@ -7,6 +7,7 @@ import { useState } from 'react';
 const ItemsList = ({reloadItems, handleReloadItems}) => {
     const localStorageKey = "test123";
     const [items, setItems] = useState([]);
+    const [filterText, setFilterText] = useState("");
     // const [reloadItems, setReloadItems] = useState(0); // use this to track when we need to reload the list
 
     // const JSONList = JSON.parse(localStorage.getItem(localStorageKey)); // 1. define the state here
@@ -26,12 +27,14 @@ const ItemsList = ({reloadItems, handleReloadItems}) => {
     };
 
     return (
-        <div className={styles.container}>
+        <div className={styles.outerContainer}>
             <p>The items will go here</p>
-            {items.map((object, index) => {
+            <input type="text" name="filter-items" placeholder="search for copied blocks..." maxLength="70" value={filterText} onChange={e => setFilterText(e.target.value)} />
+            <div className={styles.container}>            {items.map((object, index) => {
                 return <Item key={index} title={object.title} text={object.text} />
             })}
             <button onClick={reloadList}>Reload</button>
+            </div>
         </div>
     )
 };
