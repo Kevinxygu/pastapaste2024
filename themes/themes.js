@@ -15,3 +15,11 @@ export const darkModeThemes = {
     largeText: "#E0E0E0",
     bigButton: "#DB3939",
 }
+
+export const lightModeThemes = {
+    smallText: "#74797F",
+    icons: "#74797F",
+    footerIcons: "#7F797F",
+    largeText: "#353535",
+    bigButton: "#DB3939"
+}
