@@ -3,6 +3,7 @@ import styles from '../../styles/home/ItemsList.module.css'
 import Item from './Item.jsx';
 import { useEffect } from 'react';
 import { useState } from 'react';
+import searchPNG from '../../assets/images/VectorMagnifying.png'
 
 const ItemsList = ({reloadItems, handleReloadItems}) => {
     const localStorageKey = "test123";
@@ -28,7 +29,10 @@ const ItemsList = ({reloadItems, handleReloadItems}) => {
 
     return (
         <div className={styles.outerContainer}>
-            <input className={styles.searchBox}type="text" name="filter-items" placeholder="search for copied blocks..." maxLength="70" value={filterText} onChange={e => setFilterText(e.target.value)} />
+            <div className={styles.searchContainer}>
+                <input className={styles.searchBox}type="text" name="filter-items" placeholder="search for copied blocks..." maxLength="70" value={filterText} onChange={e => setFilterText(e.target.value)} />
+                <img className={styles.searchIcon} href={searchPNG} />
+            </div>            
             <div className={styles.container}>            {items.map((object, index) => {
                 return <Item key={index} title={object.title} text={object.text} />
             })}

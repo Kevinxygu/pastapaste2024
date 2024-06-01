@@ -15,24 +15,42 @@
 .outerContainer {
     color: white;
     background-color: #343434;
-    padding: 40px 10px 10px;
+    padding: 40px 25px 10px;
     text-align: center;
+}
+
+.searchContainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .searchBox {
     margin: 30px 0px 10px 0px;
     border: none;
-    border-bottom: 1px solid #74797F;
+    border-bottom: 1px solid #4F4F4F;
     background: #343434;
     color:#74797F;
     font-size: 15px;
     transition: 0.5s ease;
     font-weight: 300;
-    width: 215px;
+    padding: 12px 2px;
+    width: 350px;
 }
 
 .searchBox:focus {
     /* background: #545864; */
     border-bottom: 1px solid #db3939;
     outline: none;
+    color: #ffffff;
+}
+
+.searchIcon {
+    position: absolute;
+    right: 20px;
+    bottom: 20px; /* Position the icon at the bottom */
+    color: #74797F;
+    max-width: 15px;
+    pointer-events: none; /* Makes sure the icon doesn't block input */
 }

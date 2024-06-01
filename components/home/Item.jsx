@@ -29,6 +29,7 @@ const Item = (props) => {
                 </div>
             </div>
             <p className={styles.text}>{props.text}</p>
+            <div className={styles.bottomLine}></div>
         </div>
     );
 };
