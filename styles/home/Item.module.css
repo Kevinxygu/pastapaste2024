@@ -1,8 +1,37 @@
 .container {
-    text-align: center;
+    text-align: left;
     vertical-align: middle;
-    background-color: rgb(218, 42, 42);
     margin: 5px;
     padding: 10px;
     color: white;
+    display: flex;
+    flex-direction: column
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title {
+    font-size: 23px;
+    font-weight: 500;
+    color: #E0E0E0;
+    margin: 10px 50px 10px 0px;
+}
+
+.buttonGroup {
+    display: flex;
+    gap: 5px;
+}
+
+.button {
+    cursor: pointer;
+}
+
+.text {
+    font-size: 12px;
+    font-weight: 400;
+    color: #74797F;
 }

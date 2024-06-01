@@ -28,8 +28,7 @@ const ItemsList = ({reloadItems, handleReloadItems}) => {
 
     return (
         <div className={styles.outerContainer}>
-            <p>The items will go here</p>
-            <input type="text" name="filter-items" placeholder="search for copied blocks..." maxLength="70" value={filterText} onChange={e => setFilterText(e.target.value)} />
+            <input className={styles.searchBox}type="text" name="filter-items" placeholder="search for copied blocks..." maxLength="70" value={filterText} onChange={e => setFilterText(e.target.value)} />
             <div className={styles.container}>            {items.map((object, index) => {
                 return <Item key={index} title={object.title} text={object.text} />
             })}

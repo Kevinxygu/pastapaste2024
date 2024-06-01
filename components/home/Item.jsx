@@ -11,12 +11,24 @@ const Item = (props) => {
         }
     };
 
+    const deleteFromList = async(text) => {
+        console.log(`Try deleting something: ${text}`)
+    }
+
+    const textThreshold = 20; // Max letters to display before cutting off with ...
+
+
+
     return (
         <div className={styles.container}>
-            <p>HELLO WORLD! I am a chunk</p>
-            <p>{props.title}</p>
-            <p>{props.text}</p>
-            <button onClick={() => copyToClipboard(props.text)}>Copy</button>
+            <div className={styles.header}>
+                <p className={styles.title}>{props.title}</p>
+                <div className={styles.buttonGroup}>
+                    <button className={styles.button} onClick={() => copyToClipboard(props.text)}>Copy</button>
+                    <button className={styles.button} onClick={() => deleteFromList(props.text)}>Delete</button>
+                </div>
+            </div>
+            <p className={styles.text}>{props.text}</p>
         </div>
     );
 };

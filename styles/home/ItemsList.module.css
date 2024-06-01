@@ -16,4 +16,23 @@
     color: white;
     background-color: #343434;
     padding: 40px 10px 10px;
+    text-align: center;
+}
+
+.searchBox {
+    margin-top: 30px;
+    border: none;
+    border-bottom: 1px solid #74797F;
+    background: #343434;
+    color:#74797F;
+    font-size: 15px;
+    transition: 0.5s ease;
+    font-weight: 700;
+    width: 215px;
+}
+
+.searchBox:focus {
+    /* background: #545864; */
+    border-bottom: 1px solid #db3939;
+    outline: none;
 }
