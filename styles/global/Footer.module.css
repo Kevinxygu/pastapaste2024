@@ -1,5 +1,5 @@
 .container {
-    background-color: lightslategray;
+    background-color: #343434;
     justify-content: center;
     display: table;
     margin-top: 0px;
@@ -10,4 +10,22 @@
     bottom: 0; /* This line is added */
     left: 0; /* This line ensures it aligns to the left edge */
     z-index: 30;
+    color: #d9d9d9;
+}
+
+.addButton {
+    background-image: linear-gradient(#db3939, #db3939);
+    border-radius: 15px;
+    padding: 10px 30px;
+    border: none;
+    color: #D9D9D9;
+    font-size: 15px;
+    margin: 15px 30px;
+    transition: ease 0.3s;
+    cursor: pointer;
+}
+
+.addButton:hover {
+    background-image: linear-gradient(to right, #db3939, #921ea5);
+    color: #343434;
 }

@@ -10,7 +10,7 @@ const Footer = ({handleReloadItems}) => {
     return (
         <div className={styles.container}>
             <Link href="./info.html">Info</Link>
-            <button onClick={() => setAddScreenVisible(true)}>+</button>
+            <button className={styles.addButton} onClick={() => setAddScreenVisible(true)}>+</button>
             <AddNewForm handleReloadItems={handleReloadItems} visible={addScreenVisible} onHide={() => setAddScreenVisible(false)} />            
             <Link href="./settings.html">Settings</Link>
         </div>
