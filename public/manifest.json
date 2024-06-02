@@ -8,6 +8,14 @@
     "tabs",
     "unlimitedStorage"
   ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "/images/1.png"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ],
   "short_name": "nextjs",
   "version": "1.0.0",
   "description": "Chrome extension made with NextJS",
@@ -19,7 +27,7 @@
   },
   "content_scripts": [
     {
-      "matches": ["https://*/*", "http://*/*"],
+      "matches": ["<all_urls>", "https://*/*", "http://*/*"],
       "js": ["inject.js"]
     }
   ],
