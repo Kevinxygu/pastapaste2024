@@ -1,7 +1,7 @@
 .container {
     background-color: #343434;
     justify-content: center;
-    display: table;
+    display: flex;
     margin-top: 0px;
     width: 100%; /* Adjusted to 100% to span the entire width */
     text-align: center;
@@ -11,16 +11,17 @@
     left: 0; /* This line ensures it aligns to the left edge */
     z-index: 30;
     color: #d9d9d9;
+    align-items: center;
 }
 
 .addButton {
     background-image: linear-gradient(#db3939, #db3939);
     border-radius: 15px;
-    padding: 10px 30px;
+    padding: 10px 20px;
     border: none;
     color: #D9D9D9;
     font-size: 15px;
-    margin: 15px 30px;
+    margin: 15px 10px;
     transition: ease 0.3s;
     cursor: pointer;
 }
@@ -28,4 +29,18 @@
 .addButton:hover {
     background-image: linear-gradient(to right, #db3939, #921ea5);
     color: #343434;
+}
+
+.sideLinkContainer {
+    cursor: pointer;
+    transition: 0.3s ease;
+    padding: 15px;
+}
+
+.sideLinkContainer:hover {
+    opacity: 20%;
+}
+
+.sideLink {
+    max-width: 18px;
 }

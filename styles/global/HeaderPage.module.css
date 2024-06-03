@@ -15,15 +15,19 @@
     max-width: 27px;
 }
 
-.backButton {
-    max-width: 8px;
+.backButtonContainer {
     position: absolute;
-    left: 40px;
-    top: 33px;
+    left: 20px;
+    top: 13px;
     cursor: pointer;
     transition: 0.3s ease;
+    padding: 25px;
 }
 
-.backButton:hover {
+.backButtonContainer:hover {
     opacity: 20%;
+}
+
+.backButton {
+    max-width: 8px;
 }

@@ -6,8 +6,12 @@ import Link from 'next/link';
 const HeaderPage = () => {
     return (
         <div className={styles.container}>
+            <Link href="./index.html">
+            <div className={styles.backButtonContainer}>
+                <img className={styles.backButton} src='images/backArrow.png' />
+            </div>
+            </Link>
             <img className={styles.logo} src='images/logo-W.png' />
-            <Link href="./index.html"><img className={styles.backButton} src='images/backArrow.png' /></Link>
         </div>
     )
 };
