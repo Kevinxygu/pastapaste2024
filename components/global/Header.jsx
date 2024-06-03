@@ -5,7 +5,7 @@ import styles from "../../styles/global/Header.module.css"
 const Header = () => {
     return (
         <div className={styles.container}>
-            <p>Logo Home</p>
+            <img className={styles.logo} src='images/logo-W.png' />
         </div>
     )
 };

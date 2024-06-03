@@ -7,7 +7,6 @@ export default function Info() {
     return (
       <div>
         <HeaderPage />
-        <p>Info page</p>
       <Footer />
       </div>
     )

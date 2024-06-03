@@ -6,7 +6,6 @@ export default function Settings() {
     return (
       <div>
         <HeaderPage />
-        <p>Settings page</p>
       <Footer />
       </div>
     )
