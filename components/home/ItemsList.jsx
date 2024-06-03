@@ -38,7 +38,6 @@ const ItemsList = ({reloadItems, handleReloadItems}) => {
             <div className={styles.container}>            {items.map((object, index) => {
                 return <Item key={index} title={object.title} text={object.text} />
             })}
-            <button onClick={reloadList}>Reload</button>
             </div>
         </div>
     )

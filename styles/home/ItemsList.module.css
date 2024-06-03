@@ -4,8 +4,9 @@
     color: white;
     background-color: #343434;
     justify-content: center;
-    max-height: 456px;
+    max-height: 400px;
     overflow: scroll;
+    margin-bottom: 60px;
 }
 
 .container::-webkit-scrollbar {
