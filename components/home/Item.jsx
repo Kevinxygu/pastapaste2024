@@ -52,7 +52,7 @@ const Item = (props) => {
                 <p className={styles.title}>{props.title}</p>
                 <div className={styles.buttonGroup}>
                     <img className={styles.button} src='images/clipboard.png' onClick={() => copyToClipboard(props.text)} />
-                    <img className={styles.button} src='images/Menu.png' onClick={() => collapse()} />
+                    <img className={styles.button} src='images/minimize.png' onClick={() => collapse()} />
                 </div>
             </div>
             <p className={styles.text}>{props.text}</p>
