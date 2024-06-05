@@ -1,7 +1,10 @@
 import React from 'react'
 import styles from '../../styles/home/Item.module.css'
+import Link from 'next/link';
+import { useState } from 'react';
 
 const Item = (props) => {
+    const [expanded, setExpanded] = useState(false);
     const copyToClipboard = async(text) => {
         try {
             await navigator.clipboard.writeText(text);
@@ -11,27 +14,53 @@ const Item = (props) => {
         }
     };
 
+    const expand = () => {
+        if (!expanded) {
+            setExpanded(true);
+        }
+    }
+    
+    const collapse = () => {
+        if (expanded) {
+            setExpanded(false);
+        }
+    }
+
     const deleteFromList = async(text) => {
         console.log(`Try deleting something: ${text}`)
     }
 
-    const textThreshold = 20; // Max letters to display before cutting off with ...
+    const textThreshold = 35; // Max letters to display before cutting off with ...
 
-
-
-    return (
+    const shrunkItem = (
         <div className={styles.container}>
             <div className={styles.header}>
                 <p className={styles.title}>{props.title}</p>
                 <div className={styles.buttonGroup}>
-                    <button className={styles.button} onClick={() => copyToClipboard(props.text)}>Copy</button>
-                    <button className={styles.button} onClick={() => deleteFromList(props.text)}>Delete</button>
+                    <img className={styles.button} src='images/clipboard.png' onClick={() => copyToClipboard(props.text)} />
+                    <img className={styles.button} src='images/Menu.png' onClick={() => expand()} />
+                </div>
+            </div>
+            <p className={styles.text}>{(props.text.length >= textThreshold ? props.text.substring(0, textThreshold) + "..." : props.text)}</p>
+            <div className={styles.bottomLine}></div>
+        </div>
+    )
+
+    const expandedItem = (
+        <div className={styles.container}>
+            <div className={styles.header}>
+                <p className={styles.title}>{props.title}</p>
+                <div className={styles.buttonGroup}>
+                    <img className={styles.button} src='images/clipboard.png' onClick={() => copyToClipboard(props.text)} />
+                    <img className={styles.button} src='images/Menu.png' onClick={() => collapse()} />
                 </div>
             </div>
             <p className={styles.text}>{props.text}</p>
             <div className={styles.bottomLine}></div>
         </div>
-    );
+    )
+
+    return expanded ? expandedItem : shrunkItem;
 };
 
 export default Item;
