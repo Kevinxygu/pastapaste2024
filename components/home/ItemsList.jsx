@@ -3,7 +3,6 @@ import styles from '../../styles/home/ItemsList.module.css'
 import Item from './Item.jsx';
 import { useEffect } from 'react';
 import { useState } from 'react';
-import searchPNG from './images/1.png';
 
 // const magnifyingIcon = chrome.runtime.getURL('assets/images/VectorMagnifying.png');
 
@@ -33,7 +32,7 @@ const ItemsList = ({reloadItems, handleReloadItems}) => {
         <div className={styles.outerContainer}>
             <div className={styles.searchContainer}>
                 <input className={styles.searchBox}type="text" name="filter-items" placeholder="search for copied blocks..." maxLength="70" value={filterText} onChange={e => setFilterText(e.target.value)} />
-                <img className={styles.searchIcon} src='images/1.png' />
+                <img className={styles.searchIcon} src='images/searchIcon.png' />
             </div>            
             <div className={styles.container}>            {items.map((object, index) => {
                 return <Item key={index} title={object.title} text={object.text} />
