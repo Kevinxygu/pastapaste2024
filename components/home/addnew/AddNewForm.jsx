@@ -65,7 +65,6 @@ const AddNewForm = ({handleReloadItems, visible, onHide}) => {
 
     return (
         <div className={`${styles.container} ${visible ? styles.visibleContainer : ""}`}>
-            <p>Hi add a new form</p>
             <input type="text" name="create-title" placeholder="Title" maxLength="30" value={title} onChange={e => setTitle(e.target.value)} />
             <textarea placeholder="Type something you'd like to keep copying and pasting!" value={text} onChange={e => setText(e.target.value)} />
             <button onClick={makeNew}>Deez Nutty</button>
