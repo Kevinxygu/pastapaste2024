@@ -1,7 +1,7 @@
 // themes for app
 
 export const colours = {
-    red: "#DB3939",
+    pastapasteReed: "#DB3939",
     background: "#343434",
     darkGrey: "#343434",
     offWhite: "#E0E0E0",
