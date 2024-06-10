@@ -68,7 +68,7 @@ const AddNewForm = ({handleReloadItems, visible, onHide}) => {
             <input type="text" name="create-title" placeholder="Title" maxLength="30" value={title} onChange={e => setTitle(e.target.value)} />
             <textarea placeholder="Type something you'd like to keep copying and pasting!" value={text} onChange={e => setText(e.target.value)} />
             <button onClick={makeNew}>Add</button>
-            <button onClick={onHide}>Hide</button>
+            <img src='images/backArrow.png' className={styles.backButton} onClick={onHide} />
         </div>
     )
 };

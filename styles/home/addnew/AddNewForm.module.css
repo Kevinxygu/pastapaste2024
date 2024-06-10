@@ -12,3 +12,7 @@
 .visibleContainer {
     bottom: 0; /* Move into view */
 }
+
+.backButton {
+  max-width: 8px;
+}
