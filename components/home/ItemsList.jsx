@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 
 // const magnifyingIcon = chrome.runtime.getURL('assets/images/VectorMagnifying.png');
-
+// itemsList is the main page
 const ItemsList = ({reloadItems, handleReloadItems}) => {
     const localStorageKey = "test123";
     const [items, setItems] = useState([]);
