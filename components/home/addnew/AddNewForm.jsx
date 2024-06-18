@@ -4,6 +4,7 @@ import styles from '../../../styles/home/addnew/AddNewForm.module.css'
 import { useState } from 'react';
 import JSONData from '../../../assets/example/data.json';
 
+// the form to add a new item
 const AddNewForm = ({handleReloadItems, visible, onHide}) => {
     const [title, setTitle] = useState("");
     const [text, setText] = useState("");
