@@ -2,7 +2,7 @@ import React from 'react'
 import styles from "../../styles/global/Footer.module.css"
 import Link from 'next/link'
 import { useState } from 'react';
-import AddNewForm from '../home/addnew/addnewform';
+import AddNewForm from '../home/addnew/AddNewForm';
 
 // header for home page (no back button in the top)
 const Footer = ({handleReloadItems}) => {
