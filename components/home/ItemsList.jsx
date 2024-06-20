@@ -6,7 +6,6 @@ import { useState } from 'react';
 
 // const magnifyingIcon = chrome.runtime.getURL('assets/images/VectorMagnifying.png');
 // itemsList is the main page
-// comment 2
 const ItemsList = ({reloadItems, handleReloadItems}) => {
     const localStorageKey = "test123";
     const [items, setItems] = useState([]);
