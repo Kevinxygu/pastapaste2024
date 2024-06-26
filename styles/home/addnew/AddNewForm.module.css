@@ -36,11 +36,11 @@
   background: #343434;
   color:#d9d9d9;
   font-size: 15px;
-  margin: 15px;
+  margin: 25px 15px;
   padding: 3px;
   transition: 0.5s ease;
   font-weight: 700;
-  width: 215px;
+  width: 305px;
 }
 
 .titleInput:focus {
@@ -51,11 +51,11 @@
 
 .createText {
   resize: none;
-  width: 215px;
+  width: 305px;
   height: 195px;
   border-radius: 10px;
   background: #343434;
-  font-size: 12px;
+  font-size: 11px;
   border-color: #505050;
   padding: 10px;
   margin: 5px 0px 5px 0px;
@@ -67,4 +67,23 @@
 .createText:focus {
   outline: none;
   border-color: #db3939;
+}
+
+.addButton {
+  border: none; /* Remove border */
+  background: #343434;
+  border-radius: 5px; /* Rounded corners */
+  padding: 8px 15px; /* Padding */
+  font-size: 11px; /* Font size */
+  cursor: pointer; /* Change cursor to pointer */
+  display: block; /* Block display */
+  margin-left: 200px; /* Center horizontally */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+  color: #505050;
+  border: #505050 0.5px solid;
+}
+
+.addButton:hover {
+  background-color: #db3939; /* Button background color */
+  color: white; /* Button text color */
 }
