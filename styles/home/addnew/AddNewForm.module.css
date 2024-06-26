@@ -89,4 +89,5 @@
 .addButton:hover {
   background-color: #db3939; /* Button background color */
   color: white; /* Button text color */
+  border: none;
 }
