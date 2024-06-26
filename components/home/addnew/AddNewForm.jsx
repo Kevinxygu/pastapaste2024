@@ -66,10 +66,10 @@ const AddNewForm = ({handleReloadItems, visible, onHide}) => {
 
     return (
         <div className={`${styles.container} ${visible ? styles.visibleContainer : ""}`}>
-            <input type="text" name="create-title" placeholder="Title" maxLength="30" value={title} onChange={e => setTitle(e.target.value)} />
-            <textarea placeholder="Type something you'd like to keep copying and pasting!" value={text} onChange={e => setText(e.target.value)} />
-            <button onClick={makeNew}>Add</button>
-            <img src='images/backArrow.png' className={styles.backButton} onClick={onHide} />
+            <input type="text" className={styles.titleInput} name="create-title" placeholder="Title" maxLength="30" value={title} onChange={e => setTitle(e.target.value)} />
+            <textarea placeholder="Type something you'd like to keep copying and pasting!" className={styles.createText} value={text} onChange={e => setText(e.target.value)} />
+            <button className={styles.addButton} onClick={makeNew}>Add</button>
+            <img src='images/x.png' className={styles.backButton} onClick={onHide} />
         </div>
     )
 };

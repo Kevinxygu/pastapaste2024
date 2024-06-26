@@ -1,18 +1,70 @@
 .container {
-    width: 100%; /* Full width */
-    height: 300px; /* Adjustable based on your needs */
-    background-color: #f0f0f0; /* Example background */
-    position: fixed; /* Position it relative to the viewport */
-    bottom: -100%; /* Start off-screen */
-    left: 0;
-    z-index: 50;
-    transition: bottom 0.5s ease; /* Smooth transition for the 'bottom' property */
-  }
-  
+  width: 100%; /* Full width */
+  height: 350px; 
+  background-color: #343434; /* Example background */
+  position: fixed; /* Position it relative to the viewport */
+  bottom: -100%; /* Start off-screen */
+  left: 0;
+  z-index: 50;
+  transition: bottom 0.5s ease; /* Smooth transition for the 'bottom' property */
+  /* border-top-left-radius: 15px; /* Adjust the radius value as needed 
+  border-top-right-radius: 15px; /* Adjust the radius value as needed */
+  border-top: #505050 0.5px solid;
+  margin: auto;
+}
+
 .visibleContainer {
     bottom: 0; /* Move into view */
 }
 
 .backButton {
-  max-width: 8px;
+    max-width: 20px; /* Adjust size as needed */
+    position: absolute;
+    top: 20px; /* Position relative to container */
+    right: 20px; /* Position relative to container */
+    cursor: pointer; /* Change cursor to pointer */
+    transition: 0.3s ease;
+}
+
+.backButton:hover {
+  opacity: 0.2;
+}
+
+.titleInput {
+  border: none;
+  border-bottom: 1px solid #505050;
+  background: #343434;
+  color:#d9d9d9;
+  font-size: 15px;
+  margin: 15px;
+  padding: 3px;
+  transition: 0.5s ease;
+  font-weight: 700;
+  width: 215px;
+}
+
+.titleInput:focus {
+  /* background: #545864; */
+  border-bottom: 1px solid #db3939;
+  outline: none;
+}
+
+.createText {
+  resize: none;
+  width: 215px;
+  height: 195px;
+  border-radius: 10px;
+  background: #343434;
+  font-size: 12px;
+  border-color: #505050;
+  padding: 10px;
+  margin: 5px 0px 5px 0px;
+  color: #ffffff;
+  font-weight: 400;
+  transition: 0.5s ease;
+}
+
+.createText:focus {
+  outline: none;
+  border-color: #db3939;
 }
