@@ -1,45 +1,60 @@
-import React from 'react'
-import styles from '../../styles/home/ItemsList.module.css'
+import React, { useEffect, useState } from 'react';
+import styles from '../../styles/home/ItemsList.module.css';
 import Item from './Item.jsx';
-import { useEffect } from 'react';
-import { useState } from 'react';
 
 // const magnifyingIcon = chrome.runtime.getURL('assets/images/VectorMagnifying.png');
 // itemsList is the main page
-const ItemsList = ({reloadItems, handleReloadItems}) => {
+// included new search functionality
+const ItemsList = ({ reloadItems, handleReloadItems }) => {
     const localStorageKey = "test123";
     const [items, setItems] = useState([]);
     const [filterText, setFilterText] = useState("");
-    // const [reloadItems, setReloadItems] = useState(0); // use this to track when we need to reload the list
+    const [filteredItems, setFilteredItems] = useState([]);
 
-    // const JSONList = JSON.parse(localStorage.getItem(localStorageKey)); // 1. define the state here
     useEffect(() => {
-        // read the values from localStorage (didn't work when we defined it above as a const)
+        // read the values from localStorage
         const JSONList = JSON.parse(localStorage.getItem(localStorageKey));
         if (JSONList) {
             setItems(JSONList);
+            setFilteredItems(JSONList); // initialize filteredItems with the complete list
         }
-    }, [reloadItems]); // use this dependency array
+    }, [reloadItems]);
 
-    const reloadList = () => {
-        const JSONList = JSON.parse(localStorage.getItem(localStorageKey));
-        if (JSONList) {
-            setItems(JSONList);
+    useEffect(() => {
+        if (filterText === "") {
+            setFilteredItems(items);
+        } else {
+            setFilteredItems(
+                items.filter(
+                    item => 
+                        item.title.toLowerCase().includes(filterText.toLowerCase()) || 
+                        item.text.toLowerCase().includes(filterText.toLowerCase())
+                )
+            );
         }
-    };
+    }, [filterText, items]);
 
     return (
         <div className={styles.outerContainer}>
             <div className={styles.searchContainer}>
-                <input className={styles.searchBox}type="text" name="filter-items" placeholder="search for copied blocks..." maxLength="70" value={filterText} onChange={e => setFilterText(e.target.value)} />
+                <input 
+                    className={styles.searchBox} 
+                    type="text" 
+                    name="filter-items" 
+                    placeholder="search for copied blocks..." 
+                    maxLength="70" 
+                    value={filterText} 
+                    onChange={e => setFilterText(e.target.value)} 
+                />
                 <img className={styles.searchIcon} src='images/searchIcon.png' />
             </div>            
-            <div className={styles.container}>            {items.map((object, index) => {
-                return <Item key={index} title={object.title} text={object.text} />
-            })}
+            <div className={styles.container}>
+                {filteredItems.map((object, index) => (
+                    <Item key={index} title={object.title} text={object.text} />
+                ))}
             </div>
         </div>
-    )
+    );
 };
 
 export default ItemsList;
