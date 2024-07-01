@@ -2,9 +2,6 @@ import React, { useEffect, useState } from 'react';
 import styles from '../../styles/home/ItemsList.module.css';
 import Item from './Item.jsx';
 
-// const magnifyingIcon = chrome.runtime.getURL('assets/images/VectorMagnifying.png');
-// itemsList is the main page
-// included new search functionality
 const ItemsList = ({ reloadItems, handleReloadItems }) => {
     const localStorageKey = "test123";
     const [items, setItems] = useState([]);
@@ -35,11 +32,15 @@ const ItemsList = ({ reloadItems, handleReloadItems }) => {
     }, [filterText, items]);
 
     const deleteFromList = (title, text, index) => {
-        console.log(text);
+        // testing
         console.log(title);
-        console.log(index);
+        console.log(text);
+        const updatedItems = items.filter((item, idx) => idx !== index);
+        setItems(updatedItems);
+        setFilteredItems(updatedItems);
+        localStorage.setItem(localStorageKey, JSON.stringify(updatedItems));
         handleReloadItems();
-    }
+    };
 
     return (
         <div className={styles.outerContainer}>
@@ -57,7 +58,7 @@ const ItemsList = ({ reloadItems, handleReloadItems }) => {
             </div>            
             <div className={styles.container}>
                 {filteredItems.map((object, index) => {
-                    return <Item index={index} title={object.title} text={object.text} deleteFromList={deleteFromList} />
+                    return <Item key={index} index={index} title={object.title} text={object.text} deleteFromList={deleteFromList} />
                 })}
             </div>
         </div>

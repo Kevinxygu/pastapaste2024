@@ -1,16 +1,16 @@
-import React from 'react'
-import styles from '../../styles/home/Item.module.css'
-import Link from 'next/link';
+import React from 'react';
+import styles from '../../styles/home/Item.module.css';
 import { useState } from 'react';
 
 const Item = ({index, title, text, deleteFromList}) => {
     const [expanded, setExpanded] = useState(false);
+
     const copyToClipboard = async(text) => {
         try {
             await navigator.clipboard.writeText(text);
             console.log("Text copied to clipboard");
         } catch (err) {
-            console.log("Error with copying text to clipboard")
+            console.log("Error with copying text to clipboard");
         }
     };
 
@@ -18,13 +18,13 @@ const Item = ({index, title, text, deleteFromList}) => {
         if (!expanded) {
             setExpanded(true);
         }
-    }
+    };
     
     const collapse = () => {
         if (expanded) {
             setExpanded(false);
         }
-    }
+    };
 
     const textThreshold = 35; // Max letters to display before cutting off with ...
 
@@ -40,7 +40,7 @@ const Item = ({index, title, text, deleteFromList}) => {
             <p className={styles.text}>{(text.length >= textThreshold ? text.substring(0, textThreshold) + "..." : text)}</p>
             <div className={styles.bottomLine}></div>
         </div>
-    )
+    );
 
     const expandedItem = (
         <div className={styles.container}>
@@ -55,7 +55,7 @@ const Item = ({index, title, text, deleteFromList}) => {
             <p className={styles.text}>{text}</p>
             <div className={styles.bottomLine}></div>
         </div>
-    )
+    );
 
     return expanded ? expandedItem : shrunkItem;
 };
