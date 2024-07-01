@@ -34,6 +34,13 @@ const ItemsList = ({ reloadItems, handleReloadItems }) => {
         }
     }, [filterText, items]);
 
+    const deleteFromList = (title, text, index) => {
+        console.log(text);
+        console.log(title);
+        console.log(index);
+        handleReloadItems();
+    }
+
     return (
         <div className={styles.outerContainer}>
             <div className={styles.searchContainer}>
@@ -49,9 +56,9 @@ const ItemsList = ({ reloadItems, handleReloadItems }) => {
                 <img className={styles.searchIcon} src='images/searchIcon.png' />
             </div>            
             <div className={styles.container}>
-                {filteredItems.map((object, index) => (
-                    <Item key={index} title={object.title} text={object.text} reloadItems={reloadItems} />
-                ))}
+                {filteredItems.map((object, index) => {
+                    return <Item index={index} title={object.title} text={object.text} deleteFromList={deleteFromList} />
+                })}
             </div>
         </div>
     );

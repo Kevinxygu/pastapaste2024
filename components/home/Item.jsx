@@ -3,7 +3,7 @@ import styles from '../../styles/home/Item.module.css'
 import Link from 'next/link';
 import { useState } from 'react';
 
-const Item = ({key, title, text, reloadItems}) => {
+const Item = ({index, title, text, deleteFromList}) => {
     const [expanded, setExpanded] = useState(false);
     const copyToClipboard = async(text) => {
         try {
@@ -24,11 +24,6 @@ const Item = ({key, title, text, reloadItems}) => {
         if (expanded) {
             setExpanded(false);
         }
-    }
-
-    const deleteFromList = () => {
-        console.log(key);
-
     }
 
     const textThreshold = 35; // Max letters to display before cutting off with ...
@@ -54,7 +49,7 @@ const Item = ({key, title, text, reloadItems}) => {
                 <div className={styles.buttonGroup}>
                     <img className={styles.button} src='images/clipboard.png' onClick={() => copyToClipboard(text)} />
                     <img className={styles.button} src='images/minimize.png' onClick={() => collapse()} />
-                    <img className={styles.button} src='images/x.png' onClick={() => deleteFromList()} />
+                    <img className={styles.button} src='images/x.png' onClick={() => deleteFromList(title, text, index)} />
                 </div>
             </div>
             <p className={styles.text}>{text}</p>
