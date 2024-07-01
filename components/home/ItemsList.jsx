@@ -50,7 +50,7 @@ const ItemsList = ({ reloadItems, handleReloadItems }) => {
             </div>            
             <div className={styles.container}>
                 {filteredItems.map((object, index) => (
-                    <Item key={index} title={object.title} text={object.text} />
+                    <Item key={index} title={object.title} text={object.text} reloadItems={reloadItems} />
                 ))}
             </div>
         </div>
