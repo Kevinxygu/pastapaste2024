@@ -7,6 +7,7 @@ import Footer from '../components/global/Footer.jsx'
 import Link from "next/link"
 import { useState } from "react"
 
+// home page with list of items. this is the default page for the app
 export default function Home() {
   const [reloadItems, setReloadItems] = useState(0);
 
