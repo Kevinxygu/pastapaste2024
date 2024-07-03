@@ -4,7 +4,7 @@ import styles from '../../../styles/home/addnew/AddNewForm.module.css'
 import { useState } from 'react';
 import JSONData from '../../../assets/example/data.json';
 
-// the form to add a new item
+// the form to add a new item, which is hidden below the footer and pops up when button is clicked
 const AddNewForm = ({handleReloadItems, visible, onHide}) => {
     const [title, setTitle] = useState("");
     const [text, setText] = useState("");
