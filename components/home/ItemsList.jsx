@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import styles from '../../styles/home/ItemsList.module.css';
 import Item from './Item.jsx';
 
+// main page. has the search bar to view the list of items, and hosts the list of items from localStorage
 const ItemsList = ({ reloadItems, handleReloadItems }) => {
     const localStorageKey = "test123";
     const [items, setItems] = useState([]);
