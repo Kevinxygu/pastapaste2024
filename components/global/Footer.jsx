@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { useState } from 'react';
 import AddNewForm from '../home/addnew/AddNewForm';
 
-// header for home page (no back button in the top)
+// footer for page, that's on every page
 const Footer = ({handleReloadItems}) => {
     const [addScreenVisible, setAddScreenVisible] = useState(false)
     return (

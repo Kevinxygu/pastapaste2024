@@ -3,6 +3,7 @@ import React from 'react'
 import styles from "../../styles/global/HeaderPage.module.css"
 import Link from 'next/link';
 
+// header for side pages (info.js and settings.js), has a back button in the top
 const HeaderPage = () => {
     return (
         <div className={styles.container}>
