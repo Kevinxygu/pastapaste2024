@@ -84,4 +84,10 @@
     max-width: 100px;
     margin-right: 125px;
     margin-top: 10px;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none;    /* Firefox */
+    -ms-user-select: none;     /* Internet Explorer/Edge */
+    user-select: none;         /* Non-prefixed version, currently supported by Chrome and Opera */
+    -webkit-touch-callout: none; /* Disable callout on long touch on iOS */
+    -webkit-user-drag: none;   /* Disable dragging on WebKit browsers */
 }
