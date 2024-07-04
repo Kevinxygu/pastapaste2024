@@ -4,7 +4,7 @@ import Item from './Item.jsx';
 
 // main page. has the search bar to view the list of items, and hosts the list of items from localStorage
 const ItemsList = ({ reloadItems, handleReloadItems }) => {
-    const localStorageKey = "test123";
+    const localStorageKey = "test12345";
     const [items, setItems] = useState([]);
     const [filterText, setFilterText] = useState("");
     const [filteredItems, setFilteredItems] = useState([]);
@@ -42,8 +42,17 @@ const ItemsList = ({ reloadItems, handleReloadItems }) => {
         localStorage.setItem(localStorageKey, JSON.stringify(updatedItems));
         handleReloadItems();
     };
+    
+    const itemsListEmpty = (
+        <div className={styles.outerContainer}>
+            <img src="images/flushed.png" alt="flushed emoji" className={styles.emoji} />
+            <p className={styles.message}>There isn’t anything here…</p>
+            <p className={styles.subMessage}>Click here to add a new chunk of text!</p>
+            <img src="images/squigglyArrow.png" alt="squiggly arrow" className={styles.arrow} />
+        </div>
+    )
 
-    return (
+    const itemsListWithItems = (
         <div className={styles.outerContainer}>
             <div className={styles.searchContainer}>
                 <input 
@@ -63,7 +72,13 @@ const ItemsList = ({ reloadItems, handleReloadItems }) => {
                 })}
             </div>
         </div>
-    );
+    )
+
+    if (items.length === 0) {
+        return itemsListEmpty;
+    } else {
+        return itemsListWithItems;
+    }
 };
 
 export default ItemsList;
