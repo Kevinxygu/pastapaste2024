@@ -10,34 +10,7 @@ const AddNewForm = ({handleReloadItems, visible, onHide}) => {
     const [text, setText] = useState("");
 
     const makeNew = () => {
-        // chrome.storage.local.set({localStorageKey: "something"})
-        // .then(() => chrome.storage.local.get([localStorageKey]))
-        // .then(result => alert(result)).catch(error => console.log(error));
-
-        // try {
-        //     await chrome.storage.local.set({test123: "try something"});
-        //     const result = await chrome.storage.local.get(['test123']);
-        //     alert("result");
-        // } catch(error) {
-        //     alert(error)
-        // }
-
-        // localStorage.setItem("newChunk", JSON.stringify({"title": title, "text": text}));
-
         const localStorageKey = "test123";
-
-        // chrome.storage.local.get(["test123"], function(result) {
-        //     const existingChunks = result[localStorageKey] ? result[localStorageKey].chunks : [];
-
-        //     // Append a new chunk
-        //     const newChunk = {"title": title, "text": text};
-        //     const updated = [...existingChunks, newChunk];
-
-        //     // save the updated chunks
-        //     chrome.storage.local.set({[localStorageKey]: {chunks: updated}}, function() {
-        //         console.log("Successfully added a new chunk");
-        //     });
-        // });
 
         // get existing list of localStorageValues
         const existingValues = localStorage.getItem(localStorageKey);
@@ -50,16 +23,10 @@ const AddNewForm = ({handleReloadItems, visible, onHide}) => {
             existingJSONArr.push(newObjectToAdd);
             localStorage.setItem(localStorageKey, JSON.stringify(existingJSONArr));
         }
-        // chrome.storage.local.set({"123": 50}).then(() => {alert("The value is now set");});
-        alert(`Originally it was ${existingValues} and now it is ${localStorage.getItem(localStorageKey)}`);
-        // // setTimeout(function() {
-        // //     console.log("Sleeping now")
-        // // }, 2000);
 
-        // // stuck on chrome.storage.local part. need to re-try and work on it!
-        // chrome.storage.local.get(["test123"]).then((result) => {console.log("Value is " + result["test123"]);});
-        // const testItemRetrieval = localStorage.getItem("newChunk");
-        // alert("The value we stored is " + testItemRetrieval);
+        // for testing
+        //alert(`Originally it was ${existingValues} and now it is ${localStorage.getItem(localStorageKey)}`);
+        
         handleReloadItems();
     }
 
