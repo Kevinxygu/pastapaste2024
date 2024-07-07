@@ -6,6 +6,7 @@ import { useState } from 'react';
 const Item = ({index, title, text, deleteFromList}) => {
     const [expanded, setExpanded] = useState(false);
 
+    // Function to take the current Item's text, and copy it to clipboard
     const copyToClipboard = async(text) => {
         try {
             await navigator.clipboard.writeText(text);
@@ -15,12 +16,14 @@ const Item = ({index, title, text, deleteFromList}) => {
         }
     };
 
+    // Function: to expand the item from its truncated view into the larger view, which shows the entire text
     const expand = () => {
         if (!expanded) {
             setExpanded(true);
         }
     };
-    
+
+    // Function: to expand the item from its larger view into the truncated view, which shortens the text to copy/paste
     const collapse = () => {
         if (expanded) {
             setExpanded(false);
@@ -29,6 +32,8 @@ const Item = ({index, title, text, deleteFromList}) => {
 
     const textThreshold = 35; // Max letters to display before cutting off with ...
 
+    // This is the react component which renders when the item should be truncated/shrunk
+    // This is the DEFAULT VIEW
     const shrunkItem = (
         <div className={styles.container}>
             <div className={styles.header}>
@@ -43,6 +48,7 @@ const Item = ({index, title, text, deleteFromList}) => {
         </div>
     );
 
+    // This is the react component which renders when the item should be completely expanded.
     const expandedItem = (
         <div className={styles.container}>
             <div className={styles.header}>
