@@ -64,6 +64,7 @@ const Item = ({index, title, text, deleteFromList}) => {
         </div>
     );
 
+    // Based on the state, render expanded item or the shrunk/truncated version
     return expanded ? expandedItem : shrunkItem;
 };
 
