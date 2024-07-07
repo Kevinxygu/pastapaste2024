@@ -49,8 +49,8 @@ const Item = ({index, title, text, deleteFromList}) => {
                 <p className={styles.title}>{title}</p>
                 <div className={styles.buttonGroup}>
                     <img className={styles.button} src='images/clipboard.png' onClick={() => copyToClipboard(text)} />
-                    <img className={styles.button} src='images/minimize.png' onClick={() => collapse()} />
                     <img className={styles.button} src='images/x.png' onClick={() => deleteFromList(title, text, index)} />
+                    <img className={styles.button} src='images/minimize.png' onClick={() => collapse()} />                
                 </div>
             </div>
             <p className={styles.text}>{text}</p>

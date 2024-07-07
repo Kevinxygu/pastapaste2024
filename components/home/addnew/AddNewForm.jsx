@@ -24,7 +24,7 @@ const AddNewForm = ({handleReloadItems, visible, onHide}) => {
 
         // localStorage.setItem("newChunk", JSON.stringify({"title": title, "text": text}));
 
-        const localStorageKey = "test12345";
+        const localStorageKey = "test123";
 
         // chrome.storage.local.get(["test123"], function(result) {
         //     const existingChunks = result[localStorageKey] ? result[localStorageKey].chunks : [];
