@@ -9,6 +9,7 @@ const AddNewForm = ({handleReloadItems, visible, onHide}) => {
     const [title, setTitle] = useState("");
     const [text, setText] = useState("");
 
+    // Function: make a new storageKeyValue and add it to localStorage
     const makeNew = () => {
         const localStorageKey = "test123";
 
@@ -26,11 +27,11 @@ const AddNewForm = ({handleReloadItems, visible, onHide}) => {
 
         // for testing
         //alert(`Originally it was ${existingValues} and now it is ${localStorage.getItem(localStorageKey)}`);
-        
+
         handleReloadItems();
     }
 
-
+    // Component to render
     return (
         <div className={`${styles.container} ${visible ? styles.visibleContainer : ""}`}>
             <input type="text" className={styles.titleInput} name="create-title" placeholder="Title" maxLength="30" value={title} onChange={e => setTitle(e.target.value)} />
