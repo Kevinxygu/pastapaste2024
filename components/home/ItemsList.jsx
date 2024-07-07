@@ -9,6 +9,7 @@ const ItemsList = ({ reloadItems, handleReloadItems }) => {
     const [filterText, setFilterText] = useState("");
     const [filteredItems, setFilteredItems] = useState([]);
 
+    // reload the items from localStorage
     useEffect(() => {
         // read the values from localStorage
         const JSONList = JSON.parse(localStorage.getItem(localStorageKey));
