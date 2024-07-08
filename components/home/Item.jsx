@@ -2,7 +2,7 @@ import React from 'react';
 import styles from '../../styles/home/Item.module.css';
 import { useState } from 'react';
 
-// A singular item to copy and paste inside app
+// A singular item to copy and paste inside app. Iterated over via ItemsList
 const Item = ({index, title, text, deleteFromList}) => {
     const [expanded, setExpanded] = useState(false);
 
