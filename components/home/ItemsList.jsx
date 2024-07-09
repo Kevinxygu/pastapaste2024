@@ -19,6 +19,7 @@ const ItemsList = ({ reloadItems, handleReloadItems }) => {
         }
     }, [reloadItems]);
 
+    // useEffect to render filtered Text
     useEffect(() => {
         if (filterText === "") {
             setFilteredItems(items);
