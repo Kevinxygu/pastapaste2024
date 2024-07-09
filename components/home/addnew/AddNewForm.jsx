@@ -28,6 +28,13 @@ const AddNewForm = ({handleReloadItems, visible, onHide}) => {
         // for testing
         //alert(`Originally it was ${existingValues} and now it is ${localStorage.getItem(localStorageKey)}`);
 
+        const CHROME_STORAGE_TEST = "hello";
+        chrome.storage.sync.set({ [CHROME_STORAGE_TEST]: "Hello World!" }, () => {
+            chrome.storage.sync.get([CHROME_STORAGE_TEST], (result) => {
+                console.log(result[CHROME_STORAGE_TEST]);
+            });
+        });   
+
         handleReloadItems();
     }
 
