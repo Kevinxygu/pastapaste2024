@@ -35,7 +35,11 @@ const AddNewForm = ({handleReloadItems, visible, onHide}) => {
             });
         });   
 
+        // Reload all the items to get the newest value
         handleReloadItems();
+
+        // Hide the form from view
+        onHide();
     }
 
     // Component to render
