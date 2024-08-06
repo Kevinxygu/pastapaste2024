@@ -40,6 +40,10 @@ const AddNewForm = ({handleReloadItems, visible, onHide}) => {
 
         // Hide the form from view
         onHide();
+
+        // Reset the form fields
+        setTitle("");
+        setText("");
     }
 
     // Component to render
