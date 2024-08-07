@@ -4,7 +4,8 @@ import Link from 'next/link'
 import { useState } from 'react';
 import AddNewForm from '../home/addnew/AddNewForm';
 
-// footer for page, that's on every page
+// footer for page, that's on every page.
+// Has a button that triggers the new form to add a new item
 const Footer = ({handleReloadItems}) => {
     const [addScreenVisible, setAddScreenVisible] = useState(false)
     return (

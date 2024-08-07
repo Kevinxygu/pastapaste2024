@@ -25,15 +25,14 @@ const AddNewForm = ({handleReloadItems, visible, onHide}) => {
             localStorage.setItem(localStorageKey, JSON.stringify(existingJSONArr));
         }
 
-        // for testing
-        //alert(`Originally it was ${existingValues} and now it is ${localStorage.getItem(localStorageKey)}`);
-
-        const CHROME_STORAGE_TEST = "hello";
-        chrome.storage.sync.set({ [CHROME_STORAGE_TEST]: "Hello World!" }, () => {
-            chrome.storage.sync.get([CHROME_STORAGE_TEST], (result) => {
-                console.log(result[CHROME_STORAGE_TEST]);
-            });
-        });   
+        // Old testing code for chrome storage sync
+        // TODO need to refactor the overall code to use Chrome.sync as the main storage method
+        // const CHROME_STORAGE_TEST = "hello";
+        // chrome.storage.sync.set({ [CHROME_STORAGE_TEST]: "Hello World!" }, () => {
+        //     chrome.storage.sync.get([CHROME_STORAGE_TEST], (result) => {
+        //         console.log(result[CHROME_STORAGE_TEST]);
+        //     });
+        // });   
 
         // Reload all the items to get the newest value
         handleReloadItems();
