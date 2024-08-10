@@ -30,7 +30,8 @@ const Item = ({index, title, text, deleteFromList}) => {
         }
     };
 
-    const textThreshold = 35; // Max letters to display before cutting off with ...
+    // Max letters to display before cutting off with ...
+    const textThreshold = 35;
 
     // This is the react component which renders when the item should be truncated/shrunk
     // This is the DEFAULT VIEW

@@ -34,6 +34,7 @@ const ItemsList = ({ reloadItems, handleReloadItems }) => {
         }
     }, [filterText, items]);
 
+    // Function to delete an item from the list
     const deleteFromList = (title, text, index) => {
         // testing
         console.log(title);
@@ -44,7 +45,8 @@ const ItemsList = ({ reloadItems, handleReloadItems }) => {
         localStorage.setItem(localStorageKey, JSON.stringify(updatedItems));
         handleReloadItems();
     };
-    
+
+    // JSX for when there are no items in the list (includes the flushed face)
     const itemsListEmpty = (
         <div className={styles.outerContainer}>
             <img src="images/flushed.png" alt="flushed emoji" className={styles.emoji} />
@@ -54,6 +56,7 @@ const ItemsList = ({ reloadItems, handleReloadItems }) => {
         </div>
     )
 
+    // JSX for when there are items in the list
     const itemsListWithItems = (
         <div className={styles.outerContainer}>
             <div className={styles.searchContainer}>
@@ -76,6 +79,7 @@ const ItemsList = ({ reloadItems, handleReloadItems }) => {
         </div>
     )
 
+    // return the JSX based on whether there are items in the list or not
     if (items.length === 0) {
         return itemsListEmpty;
     } else {
