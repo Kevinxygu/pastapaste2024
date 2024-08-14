@@ -17,3 +17,5 @@ I originally started this project a couple years ago. It was something I dusted 
 1. `Career`: One folder for all your job searching text pieces. Maybe you see yourself writing the same description about your most recent job?
 2. `Twitch`: Funny copypasta messages in Twitch chat you'd like to have ready for you to spam.
 3. `Links`: Links you send all the time. Maybe a Zoom link invitation you send to everyone, or your Portfolio/Github/Linkedin URL to keep handy?
+
+I also wanted to give credit to this [Github repo](https://github.com/pondorasti/nextjs-chrome-extension) which I forked from to get started!
