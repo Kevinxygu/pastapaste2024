@@ -1,49 +1,19 @@
-# This project uses the below boilerplate extension :)) 
+# 🍝 PastaPaste
 
-The full readme will be updated soon!
+PastaPaste is a clipboard Chrome extension to store text for ultimate convenience. Examples include:
 
-nextjs-chrome-extension
+## :book: Learnings
 
-An unopiniated starter for developing Chrome extensions using Next.js
+I originally started this project a couple years ago. It was something I dusted off and continued. The main purpose of this project was to learn while building something valuable for users, and I especially enjoyed learning about:
+| Concept | Learnings |
+|:---|:---|
+| Refactoring | The old Pastapaste used class-based React, and I wanted to learn modern React. A big part was also reading old code from two years ago, and since I had grown as a better developer since then I felt like I was reading someone else's code. It was a rewarding experience to learn how to a.) understand the thought process by reading code and b.) implementing improvements I saw fit!|
+| Chrome API | Since I developed a Chrome extension, I learned about and used the [Chrome API](https://developer.chrome.com/docs/extensions/reference/api). I especially enjoyed learning about `storage.sync`, allowing users to sync data across browsers.|
+| NextJS | This wasn't my first time developing in NextJS, but it had been my first time in a while so it was rewarding to get back into the groove and bolstering my front-end skills!|
 
-<p align="center">
-<img src="./assets/images/nextjs-chrome-extension.png" alt="Screenshot of nextjs-chrome-extension" width="616">
-</p>
-  
-## Getting Started
-
-First, install dependencies and build the project:
-```bash
-npm install && npm run build
-```
-This will create an `/out` directory that can you can add to Chrome as an extension. The `manifest.json` links `pages/index.js` to the generated `index.html`. On top of that, the `/public/inject.js` script is configured to run on any host url.
-
-Second, start developing:
-```bash
-npm run dev
-```
-You can start editing the extension by modifying `pages/index.js` or any file in `/public`. The extension will automatically re-build as you make changes.
-
-**🚩 Note**: [`gsed`](https://formulae.brew.sh/formula/gnu-sed#default) is used during `build` and `development` steps to bundle the project in a Chrome extension. Therefore, you will need to have this CLI installed on your development machine.
-```bash
-brew install gsed // homebrew installation
-```
-
-## Add extension to chrome
-
-Open the Extension Management page by navigating to `chrome://extensions`. Enable Developer Mode by clicking the toggle switch next to Developer mode. Click the Load unpacked button and select the `/out` directory.
-
-<p align="center">
-<img src="/assets/images/add-extension-to-chrome.png" alt="Screenshot of chrome://extensions page" width="616">
-</p>
-
-## Learn More
-
-To learn more about Next.js or extensions, take a look at the following resources:
-
-- [Chrome Extensions Documentation](https://developer.chrome.com/docs/extensions/)
-- [Next.js Documentation](https://nextjs.org/docs)
-
-This template was originally inspired by the following article, [Creating a Chrome Extension with NextJS](https://aaronscherer.me/blog/post/creating-a-chrome-extension-with-nextjs).
-
-
+## :city_sunrise: Future Features + Considerations
+[Aug 12]: Filter options (e.g. Sort by oldest, newest, alphabetical, etc.) to give the most options for the user to see their options
+[Aug 12]: Tags/Folders to group pieces of text together. For example:
+1. `Career`: One folder for all your job searching text pieces. Maybe you see yourself writing the same description about your most recent job?
+2. `Twitch`: Funny copypasta messages in Twitch chat you'd like to have ready for you to spam.
+3. `Links`: Links you send all the time. Maybe a Zoom link invitation you send to everyone, or your Portfolio/Github/Linkedin URL to keep handy?
