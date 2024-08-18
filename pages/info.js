@@ -8,7 +8,9 @@ export default function Info() {
     return (
       <div>
         <HeaderPage />
-      <Footer />
+        
+      
+        <Footer />
       </div>
     )
   }

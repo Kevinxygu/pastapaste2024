@@ -37,8 +37,8 @@ const ItemsList = ({ reloadItems, handleReloadItems }) => {
     // Function to delete an item from the list
     const deleteFromList = (title, text, index) => {
         // testing
-        console.log(title);
-        console.log(text);
+        // console.log(title);
+        // console.log(text);
         const updatedItems = items.filter((item, idx) => idx !== index);
         setItems(updatedItems);
         setFilteredItems(updatedItems);
