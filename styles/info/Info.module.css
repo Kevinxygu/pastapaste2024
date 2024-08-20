@@ -1,0 +1,21 @@
+.container {
+    text-align: left;
+    color: #ffffff;
+    background-color: #343434;
+    justify-content: center;
+    vertical-align: middle;
+    padding: 70px 45px;
+}
+
+.title {
+    font-size: 21px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    margin-top: 30px;
+}
+
+.text {
+    font-size: 15px;
+    font-weight: 200;
+    margin-bottom: 25px;
+}
