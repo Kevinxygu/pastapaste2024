@@ -17,6 +17,7 @@ const InfoScreen = () => {
         <div className={styles.container}>
             <p className={styles.title}>Info</p>
             <p className={styles.text}>{InfoText}</p>
+            <p className={styles.text}>The link to the GitHub repository <a className={styles.link} href="https://github.com/Kevinxygu/pastapaste2024" target="_blank" rel="noopener noreferrer">is here</a></p>
         </div>
     )
 }

@@ -19,3 +19,11 @@
     font-weight: 200;
     margin-bottom: 25px;
 }
+
+.link {
+    font-size: 15px;
+    font-weight: 200;
+    margin-bottom: 25px;
+    color: #db3939;
+    text-decoration: underline;
+}
