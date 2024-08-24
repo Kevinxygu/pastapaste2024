@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styles from '../../styles/info/Info.module.css';
 
-// info page for the app, just to introduce what the app is like
+// info page for the app, introduces what the app is like and features
 const InfoScreen = () => {
     // TODO features to consider adding:
     // 1. reset all items
