@@ -4,7 +4,7 @@ PastaPaste is a clipboard Chrome extension to store text for ultimate convenienc
 
 ## :book: Learnings
 
-I originally started this project a couple years ago. It was something I dusted off and continued. The main purpose of this project was to learn while building something valuable for users, and I especially enjoyed learning about:
+I originally started this project years ago. I dusted off and continued. The main purpose of this project was to learn while building something valuable for users, and I especially enjoyed learning about:
 | Concept | Learnings |
 |:---|:---|
 | Refactoring | The old Pastapaste used class-based React, and I wanted to learn modern React. A big part was also reading old code from two years ago, and since I had grown as a better developer since then I felt like I was reading someone else's code. It was a rewarding experience to learn how to a.) understand the thought process by reading code and b.) implementing improvements I saw fit!|
