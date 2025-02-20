@@ -35,13 +35,11 @@ const ItemsList = ({ reloadItems, handleReloadItems }) => {
     }, [filterText, items]);
 
     // Function to delete an item from the list
-    const deleteFromList = (title, text, index) => {
-        // testing
-        // console.log(title);
-        // console.log(text);
-        const updatedItems = items.filter((item, idx) => idx !== index);
+    const deleteFromList = (title, text) => {
+        const updatedItems = items.filter(item => item.title !== title || item.text !== text);
         setItems(updatedItems);
         setFilteredItems(updatedItems);
+        console.log("Removed item from list");
         localStorage.setItem(localStorageKey, JSON.stringify(updatedItems));
         handleReloadItems();
     };
@@ -72,9 +70,13 @@ const ItemsList = ({ reloadItems, handleReloadItems }) => {
                 <img className={styles.searchIcon} src='images/searchIcon.png' />
             </div>            
             <div className={styles.container}>
-                {filteredItems.map((object, index) => {
-                    return <Item key={index} index={index} title={object.title} text={object.text} deleteFromList={deleteFromList} />
-                })}
+                {filteredItems
+                    .slice()
+                    .sort((a, b) => items.indexOf(b) - items.indexOf(a))
+                    .map((object, index) => {
+                        return <Item key={index} index={index} title={object.title} text={object.text} deleteFromList={deleteFromList} />
+                    })
+                }
             </div>
         </div>
     )
